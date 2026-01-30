@@ -9,19 +9,19 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject ballPrefab;
     [SerializeField] private Transform spawnPoint;
 
-    [SerializeField] private TMP_Text ballcount_Text;
+    [SerializeField] private TMP_Text ballCountText;
     [SerializeField] private GameObject gameOverScreen;
 
     private void Start()
     {
-        ballcount_Text.text = ballsLeft.ToString();
+        ballCountText.text = ballsLeft.ToString();
     }
 
     // Call this method to handle ball loss
     public void BallLost ()
     {
         ballsLeft--;
-        ballcount_Text.text = ballsLeft.ToString();
+        ballCountText.text = ballsLeft.ToString();
         if (ballsLeft > 0)
         {
            

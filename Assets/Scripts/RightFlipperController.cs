@@ -8,12 +8,12 @@ public class RightFlipperController : MonoBehaviour
     public float hitStrength = 10000f;    // The force applied when the flipper is activated
     public float flipperDamper = 150f;    // The damping effect on the flipper's movement
 
-    private HingeJoint hingeJoint;
+    private HingeJoint HingeJoint;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        hingeJoint = GetComponent<HingeJoint>();
-        hingeJoint.useSpring = true;
+        HingeJoint = GetComponent<HingeJoint>();
+        HingeJoint.useSpring = true;
 
 
     }
@@ -38,8 +38,8 @@ public class RightFlipperController : MonoBehaviour
         {
             spring.targetPosition = restPosition;
         }
-        hingeJoint.spring = spring;
-        hingeJoint.useLimits = true;
+        GetComponent<HingeJoint>().spring = spring;
+        GetComponent<HingeJoint>().useLimits = true;
     }
 
 }
